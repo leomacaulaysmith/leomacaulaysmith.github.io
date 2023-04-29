@@ -38,6 +38,9 @@
 
       main {
         padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
       }
 
       h1 {
@@ -57,15 +60,27 @@
         margin-bottom: 10px;
       }
 
-      .image-placeholder {
+      .image-container {
         width: 50%;
         height: auto;
-        margin: 40px auto;
-        background-color: #ddd;
+        margin-right: 40px;
       }
-      
-      nav img {
-        max-width: 200px;
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+
+      @media only screen and (max-width: 768px) {
+        main {
+          flex-direction: column;
+        }
+
+        .image-container {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
     </style>
   </head>
@@ -74,7 +89,7 @@
       <h1>Leo Smith Resume Website</h1>
     </header>
     <nav>
-      <img src="new.folder/FinalProjectScreenshot.jpg" alt="Screenshot of a final project I did in which I edited footage">
+      <img src="new.folder/FinalProjectScreenshot.jpg" alt="Screenshot of a final project I did in which I edited footage" width="300">
       <ul>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="education.html">Education</a></li>
@@ -84,20 +99,24 @@
       </ul>
     </nav>
     <main>
-      <h1>Skills</h1>
-      <ul>
-        <li>Basic HTML</li>
-        <li>Spanish language Speaker</li>
-        <li>Verbal and Written Communications</li>
-        <li>Customer Service and Support</li>
-        <li>Film and Video Editing</li>
-        <li>Video and Audio Production</li>
-        <li>Adobe Creative Suite</li>
-        <li>Final Cut Pro</li>
-        <li>Microsoft Office Suite: (PowerPoint, Excel, and Word)</li>
-        <li>Advanced Google Analytics Certification</li>
-      </ul>
-      <div class="image-placeholder"></div>
+      <div class="image-container">
+        <img src="new.folder/FinalProjectScreenshot.jpg" alt="Screenshot of a final project I did in which I edited footage" width="500">
+      </div>
+      <div>
+        <h1>Skills</h1>
+        <ul>
+          <li>Basic HTML</li>
+          <li>Spanish language Speaker</li>
+          <li>Verbal and Written Communications</li>
+          <li>Customer Service and Support</li>
+          <li>Film and Video Editing</li>
+          <li>Video and Audio Production</li>
+          <li>Adobe Creative Suite</li>
+          <li>Final Cut Pro</li>
+          <li>Microsoft Office Suite: (PowerPoint, Excel, and Word)</li>
+          <li>Advanced Google Analytics Certification</li>
+        </ul>
+      </div>
     </main>
   </body>
 </html>
